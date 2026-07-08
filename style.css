@@ -703,10 +703,14 @@ input, textarea, select{ font-size:16px !important; }
   .stat__num{ font-size:2.6rem; }
   .stat__label{ font-size:.8rem; }
 
-  /* About: tighter photo block, badge stays inside the viewport */
+  /* About: tighter photo block. The badge is absolutely positioned
+     over the photo — on narrow screens the 4:5 photo is shorter, so
+     we pull the badge higher and give the figcaption extra top margin
+     so the caption text never sits underneath it. */
   .about__grid{ gap:2.4rem; }
-  .about__badge{ left:.9rem; bottom:2rem; padding:.8rem 1rem; max-width:12rem; }
+  .about__badge{ left:.9rem; bottom:3.8rem; padding:.8rem 1rem; max-width:12rem; }
   .about__badge-num{ font-size:1.7rem; }
+  .about__media figcaption{ margin-top:1.8rem; }
 
   /* Timeline: narrow the wiggling spine so it can't run under the cards */
   .timeline__spine{ left:0; width:26px; }
