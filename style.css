@@ -561,15 +561,15 @@ section{ position:relative; }
    ========================================================================== */
 .mobilebar{
   position:fixed; left:0; right:0; bottom:0; z-index:860;
-  display:none; grid-template-columns:1fr 1fr;
+  display:none; grid-template-columns:1fr 1fr; align-items:center;
   background:rgba(251,246,237,.94); backdrop-filter:blur(12px);
   border-top:1px solid rgba(44,44,44,.1);
-  padding:.7rem .8rem calc(.7rem + env(safe-area-inset-bottom));
-  gap:.7rem;
+  padding:.5rem .7rem calc(.5rem + env(safe-area-inset-bottom));
+  gap:.6rem;
 }
 .mobilebar a{
-  text-align:center; padding:.8rem .4rem; border-radius:12px;
-  font-weight:600; font-size:.88rem;
+  text-align:center; padding:.6rem .9rem; border-radius:10px;
+  font-weight:600; font-size:.9rem; white-space:nowrap;
 }
 .mobilebar__call{ border:1.5px solid var(--green); color:var(--green); }
 .mobilebar__quote{ background:linear-gradient(135deg, var(--gold), #c99a4e); color:var(--charcoal); }
