@@ -120,6 +120,8 @@
   const progressBar = document.getElementById("progressBar");
   const nav = document.getElementById("nav");
   const fab = document.getElementById("fab");
+  const mobilebar = document.getElementById("mobilebar");
+  const farmsSection = document.getElementById("farms");
   const heroBg = document.querySelector("[data-parallax]");
   const parallaxFactor = heroBg ? +heroBg.dataset.parallax : 0;
 
@@ -144,6 +146,14 @@
 
     nav.classList.toggle("nav--solid", y > 60);
     fab.classList.toggle("show", y > innerHeight * 0.8);
+
+    // Sticky action bar only appears once the Farms section is reached
+    if (mobilebar && farmsSection) {
+      mobilebar.classList.toggle(
+        "mobilebar--show",
+        farmsSection.getBoundingClientRect().top <= innerHeight * 0.6
+      );
+    }
 
     if (!reduceMotion) {
       // Hero parallax: background pans at a fraction of scroll speed
