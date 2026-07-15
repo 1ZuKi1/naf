@@ -586,7 +586,8 @@ section{ position:relative; }
   .nav__links{
     position:fixed; inset:0; z-index:-1;
     flex-direction:column; align-items:center; justify-content:center; gap:2rem;
-    background:var(--green-deep); color:var(--cream); font-size:1.4rem;
+    background:rgba(251,246,237,.97); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    color:var(--charcoal); font-size:1.4rem;
     /* Same typeface + weight as the desktop nav (Inter, 500) — this used to
        switch to the serif display font here, so mobile and desktop nav
        links looked like two different fonts. */
@@ -618,7 +619,7 @@ section{ position:relative; }
   .menu-open .nav__burger span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
   .menu-open .nav__burger span:nth-child(2){ opacity:0; }
   .menu-open .nav__burger span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
-  .menu-open{ color:var(--cream) !important; }
+  .menu-open{ color:var(--charcoal) !important; }
 
   .about__mv, .quotes, .contact__grid{ grid-template-columns:1fr; }
   .timeline__spine{ left:14px; transform:none; }
