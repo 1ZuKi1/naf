@@ -632,7 +632,8 @@ section{ position:relative; }
   .timeline .tl{ flex-direction:column; align-items:flex-start; padding-left:3rem; }
   .tl__year, .tl__card{ flex-basis:auto; text-align:left; }
   .tl__year{ margin-bottom:.5rem; }
-  .mobilebar{ display:grid; }
+  .mobilebar{ display:grid; transform:translateY(120%); transition:transform .35s cubic-bezier(.22,1,.36,1); }
+  .mobilebar.mobilebar--show{ transform:translateY(0); }
   /* FAB sits above the sticky action bar (bar height + safe area) */
   .fab{ bottom:calc(5.4rem + env(safe-area-inset-bottom)); }
   .footer{ padding-bottom:calc(7rem + env(safe-area-inset-bottom)); }
