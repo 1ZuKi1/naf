@@ -761,13 +761,13 @@ input, textarea, select{ font-size:16px !important; }
   .services__grid,
   .products__grid{
     display:flex; flex-wrap:nowrap;
-    overflow-x:auto; overflow-y:visible;
+    overflow-x:auto; overflow-y:hidden;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
     gap:1rem;
     /* Let the first/last card breathe inside the viewport */
     scroll-padding:0 var(--gutter);
-    padding:0 var(--gutter) .5rem;
+    padding:.5rem var(--gutter) 1.75rem;
     /* Kill the desktop grid-template-columns overrides */
     grid-template-columns:none;
   }
